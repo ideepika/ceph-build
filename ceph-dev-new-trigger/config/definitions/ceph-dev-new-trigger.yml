@@ -160,6 +160,13 @@
                     FORCE=True
                     DISTROS=focal
                     FLAVOR=crimson
+            - trigger-builds:
+                - project: 'ceph-dev-new'
+                  predefined-parameters: |
+                    BRANCH=${GIT_BRANCH}
+                    FORCE=True
+                    DISTROS=centos8
+                    FLAVOR=crimson
 
     wrappers:
       - inject-passwords:
